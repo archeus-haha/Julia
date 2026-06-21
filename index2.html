@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Julia Ramadhani</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd6e0, #ffe6f0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      text-align: center;
+    }
+    h1 {
+      color: #d6336c;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h2 {
+      color: #b31a55;
+      margin: 0 0 20px;
+      font-weight: normal;
+      animation: fadeIn 3s ease-in-out;
+    }
+    p {
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto 25px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      animation: fadeIn 4s ease-in-out;
+    }
+    img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      box-shadow: 0 0 20px rgba(214, 51, 108, 0.4);
+      animation: pulse 2s infinite;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .love {
+      position: absolute;
+      font-size: 24px;
+      color: #ff3366;
+      animation: fall 5s linear forwards;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-10%); opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+
+    /* FOTO PERSEGI DI POJOK KANAN BAWAH */
+    .foto-pojok {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .foto-pojok:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <a href="galeri.html">
+    <img src="wkwk.jpg" alt="Julia">
+  </a>
+  <h1>Selamat Ulang Tahun Sayangggggggggggg🎂</h1>
+  <h2>Selamat ulang tahun ke 16 yaaa, sayangg ❤</h2>
+  <p>
+    Semoga di usia kamu yang bertambah satu tahun, bertambah juga pintarnya dan cantiknya. semoga diberi panjang umur dan juga kesehatan. 💕
+  </p>
+
+  <!-- FOTO INSTAGRAM DI POJOK -->
+   <a href="https://www.instagram.com/yadywawira.el?igsh=cWN4b3JobTYxMXI1 ">
+  <img src="instagram.jpg" alt="Julia Pojok" class="foto-pojok">
+   </a>
+  <script>
+    // Animasi love jatuh
+    function createLove() {
+      const love = document.createElement("div");
+      love.classList.add("love");
+      love.innerHTML = "❤";
+      love.style.left = Math.random() * 100 + "vw";
+      love.style.fontSize = (Math.random() * 20 + 20) + "px";
+      document.body.appendChild(love);
+
+      setTimeout(() => { love.remove(); }, 5000);
+    }
+    setInterval(createLove, 400);
+  </script>
+</body>
+</html>
